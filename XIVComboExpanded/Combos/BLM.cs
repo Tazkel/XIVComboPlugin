@@ -67,23 +67,6 @@ namespace XIVComboExpandedPlugin.Combos
                 Paradox = 90;
         }
     }
-	
-	internal class IceKidGei : CustomCombo
-    {
-        protected internal override CustomComboPreset Preset { get; } = CustomComboPreset.BlmAny;
-
-        protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
-        {
-            if (actionID == BLM.Blizzard3)
-            {
-				var gauge = GetJobGauge<BLMGauge>();
-                if (!gauge.InUmbralIce && !gauge.InAstralFire)
-                    return BLM.Sharpcast;
-            }
-
-            return actionID;
-        }
-    }
 
     internal class BlackFireBlizzard4 : CustomCombo
     {
@@ -142,12 +125,11 @@ namespace XIVComboExpandedPlugin.Combos
 
         protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
         {
-            if (actionID == BLM.Transpose)
+            if (actionID == BLM.Blizzard3)
             {
-                var gauge = GetJobGauge<BLMGauge>();
-
-                if (level >= BLM.Levels.UmbralSoul && gauge.IsEnochianActive && gauge.InUmbralIce)
-                    return BLM.UmbralSoul;
+				var gauge = GetJobGauge<BLMGauge>();
+                if (!gauge.InUmbralIce && !gauge.InAstralFire)
+                    return BLM.Sharpcast;
             }
 
             return actionID;

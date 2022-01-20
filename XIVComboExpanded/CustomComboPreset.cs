@@ -122,7 +122,7 @@ namespace XIVComboExpandedPlugin
         [CustomComboInfo("Enochian No Sync Feature", "Fire 4 and Blizzard 4 will not sync to Fire 1 and Blizzard 1.", BLM.JobID)]
         BlackEnochianNoSyncFeature = 2518,
 
-        [CustomComboInfo("Umbral Soul/Transpose Switcher", "Change Transpose into Umbral Soul when Umbral Soul is usable.", BLM.JobID)]
+        [CustomComboInfo("Ice Kid Gei", "Change bliz 3", BLM.JobID)]
         BlackManaFeature = 2502,
 
         [CustomComboInfo("(Between the) Ley Lines", "Change Ley Lines into BTL when Ley Lines is active.", BLM.JobID)]
